@@ -1,0 +1,95 @@
+:root{
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+--fs:15px;
+--Lexend-Deca: 'Lexend Deca';
+--Big-Shoulders-Display:'Big Shoulders Display';
+--Lexend-Deca-weight:400;
+--Big-Shoulders-Display:700;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    padding:0;
+    margin:0;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    font-weight: var(--Lexend-Deca-weight);
+    font-family: var(--Lexend-Deca),sans-serif;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+}
+.title{
+    font-family: var(--Big-Shoulders-Display),sans-serif;
+    color:var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+    font-weight: var(--Big-Shoulders-Display);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3,320px);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.content{
+    color:var(--Transparent-white-paragraphs);
+    line-height: 1.8rem;
+}
+.column{
+    padding:2rem 2.5rem;
+}
+.a{
+    background:var(--Bright-orange);
+}
+.b{
+    background: var(--Dark-cyan);
+}
+.c{
+    background: var(--Very-dark-cyan);
+}
+
+button{
+    border:2px solid var(--Very-light-gray-background-headings-buttons);
+    background:var(--Very-light-gray-background-headings-buttons);
+    padding:0.8rem 2rem;
+    border-radius:100vw;
+    margin-top:4rem;
+    margin-bottom:1rem;
+    font-family: var(--Lexend-Deca),sans-serif;
+    transition: all 0.2s ease;
+    font-weight: var(--Lexend-Deca-weight);
+}
+.button-a{
+    color:var(--Bright-orange);
+}
+.button-b{
+    color:var(--Dark-cyan);
+}
+.button-c{
+    color:var(--Very-dark-cyan);
+}
+
+button:hover{
+    cursor: pointer;
+    background:transparent;
+    color:var(--Very-light-gray-background-headings-buttons)
+}
+
+@media  screen and (max-width:640px) {
+    main{
+        grid-template-columns: 320px;
+    }
+    button{
+        margin-top:0;
+    }
+}
